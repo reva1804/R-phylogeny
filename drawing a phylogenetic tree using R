@@ -15,3 +15,9 @@ vert.tree<-ape::read.tree(text=text.string)vert.tree<-ape::read.tree(text=text.s
 phytools::plotTree(vert.tree,offset=2,xlim=c(0,1.5), ftype="i")
 text(0.6,10, "Holometabola",col="red")
 text(0.18,5.7, "Hemimetabola",col="blue")#tree with species that have been collected
+#tree with holometabola written on side
+text.string<- "((Odonata, Ephemeroptera),(Plecoptera,(Hemiptera,(((Megaloptera, Neuroptera),Coleoptera), ((Trichoptera, Lepidoptera), Diptera)))));"
+vert.tree<-ape::read.tree(text=text.string)
+phytools::plotTree(vert.tree,offset=2,xlim=c(0,1.5), ftype="i")
+text(1.4,7.5,srt=90, "Holometabola",col="grey", cex=2)
+#tree with holometabola written on side
